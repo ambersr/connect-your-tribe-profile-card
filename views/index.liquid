@@ -1,14 +1,81 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
+  <div id="flip-card">
+    <!-- Front -->
+    <div class="flip-card-front">
+      <button id="flip-card-btn-turn-to-back">Switch to back</button>
+      <div class="overlay"></div>
+      <h1>Amber Schalker</h1>
+      <p>Student FDND</p>
+      <div class="divider"></div>
+      <main class="item-container" id="item-container">
+        <div class="tooltip"><i class="fa fa-user"></i>Wie ben ik
+          <span class="tooltiptext">
+            Ik ben {{ person.name }}, 21 jaar en ik kom uit Nieuwegein.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-pencil"></i>Mijn hobby's
+          <span class="tooltiptext">
+            Hardlopen, lezen, gitaar spelen en dagjes weg.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-briefcase"></i>Werk
+          <span class="tooltiptext">
+            Ik werk bij PurpleBird. Een online marketing agency in Utrecht.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-book"></i>Studies
+          <span class="tooltiptext">
+            Na de Havo heb ik de opleiding Webdesign op het Grafisch Lyceum in Utrecht afgerond.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-music"></i>Muziek
+          <span class="tooltiptext">
+            Ik luister naar van alles, voornamelijk The Weeknd, Tate McRae en Post Malone zijn mijn favoriet.
+          </span>
+        </div>
+        <div class="tooltip"><i class="fa fa-user"></i>Hover over me
+          <span class="tooltiptext">
+            Ik ben Amber, 21 jaar en ik kom uit Nieuwegein.
+          </span>
+        </div>
 
-  <p>{{ person.name }}</p>
+      </main>
+      <div class="qrcode">
+        <img src="assets/qrcode.png" alt="qr code portfolio van Amber Schalker">
+      </div>
+    </div>
+    <!-- Back -->
+    <div class="flip-card-back">
+      <div class="back-container">
+        <button id="flip-card-btn-turn-to-front"> Switch to front</button>
+        <h1>Get in touch</h1>
+        <p>Student FDND</p>
+        <div class="divider"></div>
+        <ul>
+          <li>
+            <i class="fa fa-phone"></i>
+            <a href="tel:0655805033">0655805033</a>
+          </li>
+          <li>
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:amber.schalker@hva.nl">amber.schalker@hva.nl</a>
+          </li>
+        </ul>
+        <div class="bottom-back">
+          <div class="socials">
+            <a href="https://www.instagram.com/amberschalker/" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com/in/amber-schalker-0a82441b6/" class="fa fa-linkedin"></a>
+            <a href="https://dribbble.com/Schalker" class="fa fa-dribbble"></a>
+          </div>
+          <div class="qrcode">
+            <img src="assets/qrcode.png" alt="qr code portfolio van Amber Schalker">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <footer></footer>
-</article>
+    <script src="/scripts/script.js"></script>
 
 {% render 'partials/foot.liquid' %}

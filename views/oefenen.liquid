@@ -1,0 +1,11 @@
+<h1>Data-Driven Web</h1>
+<p>Ik ben dus {{ person.name }}</p>
+
+<p>Het is vandaag {{ 'now' | date: '%d %B %y'}}</p>
+
+<p>Dit is mijn geboortedatum {{ person.birthdate }}</p>
+
+<p>Mijn favoriete boek {{ person.custom.favorite-book }}</p>
+
+<details><summary>Data</summary><pre>{{ person | json:4 }}</pre></details>
+

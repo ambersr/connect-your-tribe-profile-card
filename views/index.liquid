@@ -7,29 +7,29 @@
         <div class="front">
             <button id="flip-card-btn-turn-to-back">Naar achterkant</button>
             <div class="image-overlay"></div>
-            <h1>Amber Schalker</h1>
-            <p>Student FDND</p>
+            <h1>{{ person.name }}</h1>
+            <p>{{ person.custom.function }}</p>
             <div class="divider"></div>
             <div class="info">
                 <div class="tooltip"><img src="/assets/user.svg" alt=""></i>Over mij
-                    <span class="tooltiptext">Ik ben Amber Schalker, 21 jaar en ik kom uit Nieuwegein.</span>
+                    <span class="tooltiptext">{{ person.custom.about-me }}</span>
                 </div>
 
                 <div class="tooltip"><img src="/assets/books.svg" alt=""></i>Studies
-                    <span class="tooltiptext">Na de Havo heb ik de opleiding Webdesign afgerond op het GLU.</span>
+                    <span class="tooltiptext">{{ person.custom.courses }}</span>
                 </div>
 
                 <div class="tooltip"><img src="/assets/briefcase.svg" alt=""></i>Werk
-                    <span class="tooltiptext">Werkzaam bij online marketing bureau PurpleBird in Utrecht.</span>
+                    <span class="tooltiptext">{{ person.custom.work }}</span>
                 </div>
                 <div class="tooltip"><img src="/assets/heart.svg" alt=""></i>Bezigheden
-                    <span class="tooltiptext">Sporten, hardlopen, lezen, gitaar spelen en concerten bezoeken.</span>
+                    <span class="tooltiptext">{{ person.custom.loves }}</span>
                 </div>
                 <div class="tooltip"><img src="/assets/lightbulb-on.svg" alt=""></i>Kennis
-                    <span class="tooltiptext">Adobe XD, Illustrator, Figma, HTML, CSS & Javascript.</span>
+                    <span class="tooltiptext">{{ person.custom.knowledge }}</span>
                 </div>
             </div>
-            <a class="qr-code" href="#"><img src="/assets/qr-code-repository.svg" alt="QR-code"></a>
+            <img class="qr-code" src="/assets/qr-code-repository.svg" alt="QR-code">
         </div>
 
         <!-- Achterkant -->
@@ -40,11 +40,11 @@
           <div class="wrapper-back">
             {% comment %} <a class="qr-code" href="#"><img src="/assets/qrcode.png" alt="QR-code"></a> {% endcomment %}
             <h2>Get in touch</h2>
-            <p>Squad 1G</p>
+            <p>{{ person.custom.class }}</p>
             <div class="divider"></div>
             <ul>
-              <li><a class="btn-streep" href="#">Naar al mijn repository's<img src="/assets/arrow-right-card.svg" alt=""></a></li>
-              <li><a class="btn-streep" href="#">Bekijk mijn I Love WEB<img src="/assets/arrow-right-card.svg" alt=""></a></li>
+              <li><a class="btn-streep" target="_blank" href="{{ person.website }}">Naar al mijn repository's<img src="/assets/arrow-right-card.svg" alt=""></a></li>
+              <li><a class="btn-streep" target="_blank" href="{{ person.custom.iloveweb }}">Bekijk mijn I Love WEB<img src="/assets/arrow-right-card.svg" alt=""></a></li>
             </ul>
             <div class="socials">
                 <a href="https://www.instagram.com/amberschalker/"><img src="/assets/instagram-icon.svg" alt=""></a>

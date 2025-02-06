@@ -1,17 +1,14 @@
-  document.addEventListener('DOMContentLoaded', function(event) {
+// Selecteer de knoppen en de wrapper van de flipkaart
+const flipCardBtnTurnToBack = document.getElementById('flip-card-btn-turn-to-back');
+const flipCardBtnTurnToFront = document.getElementById('flip-card-btn-turn-to-front');
+const flipCard = document.querySelector('.wrapper-flipkaart');
 
-  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
-  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+// Voeg een event listener toe voor de 'turn to back' knop
+flipCardBtnTurnToBack.addEventListener('click', () => {
+  flipCard.classList.add('flipped');  // Voeg de 'flipped' class toe
+});
 
-  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
-  document.getElementById('flip-card').classList.toggle('do-flip');
-  };
-
-  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
-  document.getElementById('flip-card').classList.toggle('do-flip');
-  };
-
-            const toggleBtn = document.querySelector(".toggle");
-            toggleBtn.addEventListener("click", () => toggleBtn.classList.toggle("active"));
-
+// Voeg een event listener toe voor de 'turn to front' knop
+flipCardBtnTurnToFront.addEventListener('click', () => {
+  flipCard.classList.remove('flipped');  // Verwijder de 'flipped' class
 });

@@ -1,0 +1,357 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* fonts */
+
+@font-face {
+  font-family: 'Alisheia';
+  src: url('../assets/alisheia/alisheia.ttf');
+}
+
+@font-face {
+  font-family: 'BeyondInfinity';
+  src: url('../assets/InfinityBeyond/BeyondInfinity.ttf');
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('../assets/DMSans/dm-sans-regular.ttf');
+}
+
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+ background-color: black;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background: url('/assets/background-versie-2.svg') center/cover;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 1em;
+
+  .wrapper-flipkaart {
+    width: 100%;
+    height: 41em;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+
+    @media screen and (min-width: 400px) {
+      width: 24em;
+    }
+
+    .front {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1em;
+      border-radius: 1.5em 0em 1.5em 0em;
+      background-color: #fff;
+      z-index: 2;
+
+      button {
+        background-color: #fff;
+        border: none;
+        border-radius: 0em 0em 1em 1em;
+        padding: 1em 1em 0.5em 1em;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        cursor: pointer;
+        z-index: 2;
+        font-family: 'BeyondInfinity';
+        font-size: 25px;
+        color: #540E22;
+      }
+
+      .image-overlay {
+        width: 100%;
+        height: 30em;
+        object-fit: cover;
+        border-radius: 1em 0em 1em 0em;
+        background: url('/assets/mugshot2.jpg') center/cover;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 1) 100%);
+        }
+      }
+
+      h1 {
+        font-size: 45px;
+        font-family: 'Alisheia', sans-serif;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 2;
+        font-weight: 100;
+        margin-top: -0.4em;
+        color: #540E22;
+      }
+    }
+
+    p {
+      font-family: 'BeyondInfinity';
+      margin-top: 15px;
+      font-size: 35px;
+      font-weight: 500;
+      color: #540E22;
+      text-align: center;
+      width: 100%;
+    }
+
+    .divider {
+      width: 5em;
+      height: 1px;
+      background-color: black;
+      align-self: center;
+      margin: 1em 0em 1em 0em;
+    }
+
+    .info {
+      padding-top: 13px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+
+      .tooltip {
+        display: flex;
+        flex-direction: row;
+        background-color: #540E22;
+        gap: 0.5em;
+        padding: 0.7em 1.2em 0.7em 1.2em;
+        font-weight: 400;
+        font-family: sans-serif;
+        font-size: 15px;
+        color: #FFFEFB;
+        border-radius: 100px;
+        border: 0px;
+        font-family: 'DMSans';
+        cursor: pointer;
+        transition: .2s ease-in-out;
+
+        &:hover .tooltiptext {
+          visibility: visible;
+          transition: .2s ease-in-out;
+        }
+
+        img {
+          width: 1em;
+        }
+
+        i {
+          padding-right: 6px;
+        }
+
+        .tooltiptext {
+          visibility: hidden;
+          width: 120px;
+          background-color: #fff;
+          color: #540E22;
+          text-align: center;
+          padding: 0.5em;
+          border: 1px solid #540E22;
+          border-radius: 6px;
+          position: absolute;
+          margin-left: -10px;
+          z-index: 1;
+          transition: .2s ease-in-out;
+        }
+      }
+    }
+
+    .qr-code {
+      display: flex;
+      justify-content: center;
+      padding: 1em 0em;
+
+      img {
+        width: 7em;
+        height: 7em;
+      }
+    }
+
+    .back {
+      transform: rotateY(180deg);
+      background-color: #f5f5f5;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       padding: 1em;
+      border-radius: 1.5em 0em 1.5em 0em;
+        background-color: #fff;
+      z-index: 1;
+
+         button {
+           background-color: #fff;
+           border: none;
+           border-radius: 0em 0em 1em 1em;
+           padding: 1em 1em 0.5em 1em;
+           position: absolute;
+           top: 0;
+           left: 50%;
+           transform: translate(-50%, 0%);
+           cursor: pointer;
+           z-index: 10;
+           font-family: 'BeyondInfinity';
+           font-size: 25px;
+           color: #540E22;
+         }
+
+       .wrapper-back {
+        background-color: #540E22;
+        height: 100vh;
+        border-radius: 1em 0em 1em 0em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1;
+        position: relative;
+        padding: 1em;
+
+       .qr-code {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+      }
+
+      h2 {
+        font-size: 45px;
+        font-family: 'Alisheia', sans-serif;
+        text-align: left;
+        text-transform: uppercase;
+        z-index: 2;
+        font-weight: 100;
+        margin-top: -0.4em;
+        color: #fff;
+      }
+
+      p {
+        font-family: 'BeyondInfinity';
+        margin-top: 15px;
+        font-size: 35px;
+        font-weight: 500;
+        color: #fff;
+        text-align: left;
+        width: 100%;
+      }
+
+      .divider {
+         align-self: baseline;
+         background-color: #fff;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        li {
+          display: flex;
+
+            .btn-streep {
+              align-self: center;
+              align-items: center;
+              height: 1.8em;
+              gap: 0.5em;
+              display: flex;
+              flex-direction: row;
+              border-bottom: 1px solid #fff;
+              color: #fff;
+              text-decoration: none;
+              font-family: 'DMSans';
+            }
+
+            .btn-streep img {
+              height: 1em;
+              transition: 0.2s ease-in-out;
+            }
+
+            .btn-streep:hover img {
+              padding-left: 1em;
+              transition: 0.2s ease-in-out;
+            }
+        }
+      }
+
+      .socials {
+        display: flex;
+        flex-direction: row;
+        gap: .5em;
+        position: absolute;
+        bottom: 2em;
+
+        a {
+          background-color: #fff;
+          height: 3em;
+          width: 3em;
+          border-radius: 4em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: .2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.06);
+            transition: .2s ease-in-out;
+          }
+
+          img {
+            width: 1.2em;
+          }
+        }
+      }
+
+       }
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      padding: 1em;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* Animatie */
+
+.wrapper-flipkaart.flipped {
+  transform: rotateY(180deg);
+}
+
+.info .tooltip:nth-child(5) img {
+  width: 1.4em !important;
+}

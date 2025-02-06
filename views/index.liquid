@@ -1,63 +1,77 @@
 {% render 'partials/head.liquid' %}
 
 <div class="wrapper">
-    <div class="wrapper-flipkaart">
 
-        <!-- Voorkant -->
-        <div class="front">
-            <button id="flip-card-btn-turn-to-back">Naar achterkant</button>
-            <div class="image-overlay"></div>
-            <h1>{{ person.name }}</h1>
-            <p>{{ person.custom.function }}</p>
-            <div class="divider"></div>
-            <div class="info">
-                <div class="tooltip"><img src="/assets/user.svg" alt=""></i>Over mij
-                    <span class="tooltiptext">{{ person.custom.about-me }}</span>
-                </div>
+  <div class="wrapper-flipkaart">
 
-                <div class="tooltip"><img src="/assets/books.svg" alt=""></i>Studies
-                    <span class="tooltiptext">{{ person.custom.courses }}</span>
-                </div>
+    <!-- Voorkant -->
+    <article class="front">
 
-                <div class="tooltip"><img src="/assets/briefcase.svg" alt=""></i>Werk
-                    <span class="tooltiptext">{{ person.custom.work }}</span>
-                </div>
-                <div class="tooltip"><img src="/assets/heart.svg" alt=""></i>Bezigheden
-                    <span class="tooltiptext">{{ person.custom.loves }}</span>
-                </div>
-                <div class="tooltip"><img src="/assets/lightbulb-on.svg" alt=""></i>Kennis
-                    <span class="tooltiptext">{{ person.custom.knowledge }}</span>
-                </div>
-            </div>
-            <img class="qr-code" src="/assets/qr-code-repository.svg" alt="QR-code">
+      <button id="flip-card-btn-turn-to-back">Naar achterkant</button>
+      <div class="image-overlay"></div>
+      <h1>{{ person.name }}</h1>
+      <p>{{ person.custom.function }}</p>
+      <div class="divider"></div>
+      
+      <div class="info">
+        <div class="tooltip"><img src="/assets/user.svg" alt=""></i>Over mij
+          <span class="tooltiptext">{{ person.custom.about-me }}</span>
         </div>
 
-        <!-- Achterkant -->
-        <article class="back">
+        <div class="tooltip"><img src="/assets/books.svg" alt=""></i>Studies
+          <span class="tooltiptext">{{ person.custom.courses }}</span>
+        </div>
 
-           <button id="flip-card-btn-turn-to-front">Terug naar voorkant</button>
+        <div class="tooltip"><img src="/assets/briefcase.svg" alt=""></i>Werk
+          <span class="tooltiptext">{{ person.custom.work }}</span>
+        </div>
 
-          <div class="wrapper-back">
-            {% comment %} <a class="qr-code" href="#"><img src="/assets/qrcode.png" alt="QR-code"></a> {% endcomment %}
-            <h2>Get in touch</h2>
-            <p>{{ person.custom.class }}</p>
-            <div class="divider"></div>
-            <ul>
-              <li><a class="btn-streep" target="_blank" href="{{ person.website }}">Naar al mijn repository's<img src="/assets/arrow-right-card.svg" alt=""></a></li>
-              <li><a class="btn-streep" target="_blank" href="{{ person.custom.iloveweb }}">Bekijk mijn I Love WEB<img src="/assets/arrow-right-card.svg" alt=""></a></li>
-            </ul>
-            <div class="socials">
-                <a href="https://www.instagram.com/amberschalker/"><img src="/assets/instagram-icon.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/amber-schalker-0a82441b6/"><img src="/assets/linkedin-icon.svg" alt=""></a>
-                <a href="https://github.com/ambersr"><img src="/assets/github-icon.svg" alt=""></a>
-            </div>
+        <div class="tooltip"><img src="/assets/heart.svg" alt=""></i>Bezigheden
+          <span class="tooltiptext">{{ person.custom.loves }}</span>
+        </div>
 
-          </div>
-        </article>
+        <div class="tooltip"><img src="/assets/lightbulb-on.svg" alt=""></i>Kennis
+          <span class="tooltiptext">{{ person.custom.knowledge }}</span>
+        </div>
 
-    </div>
+      </div>
+      
+      <img class="qr-code" src="/assets/qr-code-repository.svg" alt="QR-code">
+
+    </article>
+
+    <!-- Achterkant -->
+    <article class="back">
+
+      <button id="flip-card-btn-turn-to-front">Terug naar voorkant</button>
+
+      <div class="wrapper-back">
+      
+        <h2>Get in touch</h2>
+        <p>{{ person.custom.class }}</p>
+        <div class="divider"></div>
+
+        <ul>
+          <li><a class="btn-streep" target="_blank" href="{{ person.website }}">Naar al mijn repository's<img
+                src="/assets/arrow-right-card.svg" alt=""></a></li>
+          <li><a class="btn-streep" target="_blank" href="{{ person.custom.iloveweb }}">Bekijk mijn I Love WEB<img
+                src="/assets/arrow-right-card.svg" alt=""></a></li>
+        </ul>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/amberschalker/"><img src="/assets/instagram-icon.svg" alt=""></a>
+          <a href="https://www.linkedin.com/in/amber-schalker-0a82441b6/"><img src="/assets/linkedin-icon.svg"
+              alt=""></a>
+          <a href="https://github.com/ambersr"><img src="/assets/github-icon.svg" alt=""></a>
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
 </div>
 
-    <script src="/scripts/script.js"></script>
+<script src="/scripts/script.js"></script>
 
 {% render 'partials/foot.liquid' %}

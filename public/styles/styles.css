@@ -10,15 +10,14 @@
 
 @font-face {
   font-family: 'Alisheia';
-  src: url('../assets/alisheia/alisheia.ttf');
+  src: url('../assets/alisheia/alisheia.woff') format('woff'),
+       url('../assets/alisheia/alisheia.ttf'),
+       url('../assets/alisheia/alisheia.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'BeyondInfinity';
   src: url('../assets/InfinityBeyond/BeyondInfinity.ttf') format('truetype'),
-        url('../assets/alisheia/alisheia.otf') format('opentype'),
-        url('../assets/alisheia/alisheia.woff') format('woff');
-;
 }
 
 @font-face {

@@ -15,7 +15,9 @@
 
 @font-face {
   font-family: 'BeyondInfinity';
-  src: url('../assets/InfinityBeyond/BeyondInfinity.ttf');
+  src: url('../assets/InfinityBeyond/BeyondInfinity.ttf'),
+        url('../assets/alisheia/alisheia.otf') format('opentype');
+;
 }
 
 @font-face {
